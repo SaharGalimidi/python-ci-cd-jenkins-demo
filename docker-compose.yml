@@ -1,0 +1,14 @@
+version: '3'
+services:
+  flask-app:
+    container_name: my-flask-app
+    build: .
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app
+    networks:
+      - jenkins
+
+networks:
+  jenkins:
